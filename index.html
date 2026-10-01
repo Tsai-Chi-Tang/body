@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>人體巡航｜人體器官與功能測驗</title>
+
+    <meta
+        name="description"
+        content="人體巡航－人體器官與功能互動測驗"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- ==========================================
+         網站 Header
+    =========================================== -->
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🧭
+                </div>
+
+                <div>
+                    <h1>人體巡航</h1>
+
+                    <p>
+                        人體器官與功能互動測驗
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         首頁
+    =========================================== -->
+    <main
+        id="homePage"
+        class="page active"
+    >
+
+        <section class="hero-section">
+
+            <div class="hero-decoration hero-decoration-1"></div>
+
+            <div class="hero-decoration hero-decoration-2"></div>
+
+
+            <div class="hero-content">
+
+                <div class="hero-icon">
+                    🧭
+                </div>
+
+                <h2>
+                    人體巡航
+                </h2>
+
+                <p>
+                    準備好探索人體的奇妙世界了嗎？
+                </p>
+
+                <p class="hero-subtitle">
+                    請選擇一項測驗開始作答
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             活動選擇
+        ======================================= -->
+        <section class="activity-selection">
+
+
+            <!-- 活動一 -->
+            <article class="activity-card">
+
+                <div class="activity-card-icon activity-blue">
+                    🫀
+                </div>
+
+                <div class="activity-card-number">
+                    ACTIVITY 01
+                </div>
+
+                <h3>
+                    人體器官配配樂
+                </h3>
+
+                <p>
+                    將人體器官拖曳到你認為正確的人體位置。
+                </p>
+
+                <button
+                    class="primary-button"
+                    type="button"
+                    data-page="activity1Page"
+                >
+                    <span>
+                        開始測驗
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+                </button>
+
+            </article>
+
+
+
+            <!-- 活動二 -->
+            <article class="activity-card">
+
+                <div class="activity-card-icon activity-orange">
+                    🧠
+                </div>
+
+                <div class="activity-card-number">
+                    ACTIVITY 02
+                </div>
+
+                <h3>
+                    人體功能配對
+                </h3>
+
+                <p>
+                    將人體器官拖曳到相對應的功能敘述。
+                </p>
+
+                <button
+                    class="primary-button"
+                    type="button"
+                    data-page="activity2Page"
+                >
+                    <span>
+                        開始測驗
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+                </button>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         活動一
+    =========================================== -->
+    <main
+        id="activity1Page"
+        class="page test-page"
+    >
+
+        <div class="test-container">
+
+
+            <!-- ==================================
+                 活動一標題
+            =================================== -->
+            <section class="test-header">
+
+                <button
+                    class="back-button"
+                    type="button"
+                    data-page="homePage"
+                >
+                    ← 回到活動選擇
+                </button>
+
+
+                <div class="test-title-row">
+
+                    <div>
+
+                        <div class="test-label">
+                            ACTIVITY 01
+                        </div>
+
+                        <h2>
+                            人體器官配配樂
+                        </h2>
+
+                        <p>
+                            請將上方的器官拖曳到你認為正確的人體位置。
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================
+                     姓名
+                =================================== -->
+                <div class="name-box">
+
+                    <label for="nameActivity1">
+
+                        <span class="name-icon">
+                            👤
+                        </span>
+
+                        姓名
+
+                    </label>
+
+
+                    <input
+                        id="nameActivity1"
+                        class="student-name"
+                        type="text"
+                        placeholder="請輸入姓名"
+                        autocomplete="off"
+                        maxlength="30"
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 活動一操作說明
+            =================================== -->
+            <section class="instruction-box">
+
+                <div class="instruction-icon">
+                    💡
+                </div>
+
+                <div>
+                    <strong>
+                        作答方式
+                    </strong>
+
+                    <p>
+                        請將上方的器官圖示拖曳到人體上你認為適當的位置。
+                    </p>
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 活動一器官區
+            =================================== -->
+            <section class="organ-bank-section">
+
+                <div class="section-heading">
+
+                    <span>
+                        ①
+                    </span>
+
+                    拖曳器官
+
+                </div>
+
+
+                <div
+                    id="organBank1"
+                    class="organ-bank"
+                    aria-label="活動一器官選擇區"
+                >
+                    <!-- JavaScript 產生 -->
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 活動一人體
+            =================================== -->
+            <section class="body-test-section">
+
+                <div class="section-heading">
+
+                    <span>
+                        ②
+                    </span>
+
+                    人體位置
+
+                </div>
+
+
+                <div
+                    id="bodyDropZone"
+                    class="body-drop-zone"
+                >
+
+                    <div class="body-background">
+                        <!-- JavaScript 產生人體 SVG -->
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 活動一控制按鈕
+            =================================== -->
+            <div class="test-controls">
+
+                <button
+                    id="resetActivity1"
+                    class="reset-button"
+                    type="button"
+                >
+                    ↻ 重置作答
+                </button>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 截圖提醒
+            =================================== -->
+            <section class="screenshot-reminder">
+
+                <div class="reminder-icon">
+                    📸
+                </div>
+
+
+                <div class="reminder-content">
+
+                    <h3>
+                        完成後請記得截圖
+                    </h3>
+
+                    <p>
+                        請確認姓名已填寫，再將目前的作答畫面截圖，
+                        並繳交至 Google Classroom。
+                    </p>
+
+
+                    <div class="shortcut">
+
+                        <span>
+                            Windows 截圖快捷鍵
+                        </span>
+
+
+                        <strong>
+
+                            <span>
+                                Shift
+                            </span>
+
+                            <b>+</b>
+
+                            <span>
+                                Windows
+                            </span>
+
+                            <b>+</b>
+
+                            <span>
+                                S
+                            </span>
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 返回
+            =================================== -->
+            <div class="bottom-navigation">
+
+                <button
+                    class="secondary-button"
+                    type="button"
+                    data-page="homePage"
+                >
+                    ← 回到活動選擇
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         活動二
+    =========================================== -->
+    <main
+        id="activity2Page"
+        class="page test-page"
+    >
+
+        <div class="test-container">
+
+
+            <!-- ==================================
+                 活動二標題
+            =================================== -->
+            <section class="test-header">
+
+                <button
+                    class="back-button"
+                    type="button"
+                    data-page="homePage"
+                >
+                    ← 回到活動選擇
+                </button>
+
+
+                <div class="test-title-row">
+
+                    <div>
+
+                        <div class="test-label">
+                            ACTIVITY 02
+                        </div>
+
+                        <h2>
+                            人體功能配對
+                        </h2>
+
+                        <p>
+                            請將上方的器官拖曳到相對應的功能敘述。
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================
+                     姓名
+                =================================== -->
+                <div class="name-box">
+
+                    <label for="nameActivity2">
+
+                        <span class="name-icon">
+                            👤
+                        </span>
+
+                        姓名
+
+                    </label>
+
+
+                    <input
+                        id="nameActivity2"
+                        class="student-name"
+                        type="text"
+                        placeholder="請輸入姓名"
+                        autocomplete="off"
+                        maxlength="30"
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 活動二操作說明
+            =================================== -->
+            <section class="instruction-box">
+
+                <div class="instruction-icon">
+                    💡
+                </div>
+
+                <div>
+                    <strong>
+                        作答方式
+                    </strong>
+
+                    <p>
+                        請將上方的器官圖示拖曳到你認為相對應的功能敘述右側。
+                    </p>
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 活動二器官
+            =================================== -->
+            <section class="organ-bank-section">
+
+                <div class="section-heading">
+
+                    <span>
+                        ①
+                    </span>
+
+                    拖曳器官
+
+                </div>
+
+
+                <div
+                    id="organBank2"
+                    class="organ-bank function-organ-bank"
+                    aria-label="活動二器官選擇區"
+                >
+                    <!-- JavaScript 產生 -->
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 活動二功能表
+            =================================== -->
+            <section class="function-section">
+
+                <div class="section-heading">
+
+                    <span>
+                        ②
+                    </span>
+
+                    人體功能配對
+
+                </div>
+
+
+                <div class="function-table">
+
+
+                    <!-- 表頭 -->
+                    <div class="function-table-header">
+
+                        <div>
+                            器官功能
+                        </div>
+
+                        <div>
+                            作答區
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 題目 -->
+                    <div class="function-rows">
+
+
+                        <!-- 腦 -->
+                        <div class="function-row">
+
+                            <div class="function-description">
+                                許多神經細胞組成，主要是接收、分析、協調等指揮全身運作
+                            </div>
+
+                            <div
+                                class="answer-drop-zone"
+                                data-answer-zone="brain"
+                            ></div>
+
+                        </div>
+
+
+
+                        <!-- 心臟 -->
+                        <div class="function-row">
+
+                            <div class="function-description">
+                                將氧氣及養分送給全身
+                            </div>
+
+                            <div
+                                class="answer-drop-zone"
+                                data-answer-zone="heart"
+                            ></div>
+
+                        </div>
+
+
+
+                        <!-- 肺 -->
+                        <div class="function-row">
+
+                            <div class="function-description">
+                                將氧氣送到血液並排出二氧化碳
+                            </div>
+
+                            <div
+                                class="answer-drop-zone"
+                                data-answer-zone="lungs"
+                            ></div>
+
+                        </div>
+
+
+
+                        <!-- 大腸 -->
+                        <div class="function-row">
+
+                            <div class="function-description">
+                                形成糞便並排出
+                            </div>
+
+                            <div
+                                class="answer-drop-zone"
+                                data-answer-zone="largeIntestine"
+                            ></div>
+
+                        </div>
+
+
+
+                        <!-- 胃 -->
+                        <div class="function-row">
+
+                            <div class="function-description">
+                                具有儲存、磨碎、分解及部分吸收功能
+                            </div>
+
+                            <div
+                                class="answer-drop-zone"
+                                data-answer-zone="stomach"
+                            ></div>
+
+                        </div>
+
+
+
+                        <!-- 肝臟 -->
+                        <div class="function-row">
+
+                            <div class="function-description">
+                                負責解毒、分泌膽汁、促進新陳代謝等功能
+                            </div>
+
+                            <div
+                                class="answer-drop-zone"
+                                data-answer-zone="liver"
+                            ></div>
+
+                        </div>
+
+
+
+                        <!-- 腎臟 -->
+                        <div class="function-row">
+
+                            <div class="function-description">
+                                清除過多水分及代謝廢物
+                            </div>
+
+                            <div
+                                class="answer-drop-zone"
+                                data-answer-zone="kidney"
+                            ></div>
+
+                        </div>
+
+
+
+                        <!-- 胰臟 -->
+                        <div class="function-row">
+
+                            <div class="function-description">
+                                有酵素可消化多數養分並有調節血糖功能
+                            </div>
+
+                            <div
+                                class="answer-drop-zone"
+                                data-answer-zone="pancreas"
+                            ></div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 活動二控制按鈕
+            =================================== -->
+            <div class="test-controls">
+
+                <button
+                    id="resetActivity2"
+                    class="reset-button"
+                    type="button"
+                >
+                    ↻ 重置作答
+                </button>
+
+            </div>
+
+
+
+            <!-- ==================================
+                 截圖提醒
+            =================================== -->
+            <section class="screenshot-reminder">
+
+                <div class="reminder-icon">
+                    📸
+                </div>
+
+
+                <div class="reminder-content">
+
+                    <h3>
+                        完成後請記得截圖
+                    </h3>
+
+                    <p>
+                        請確認姓名已填寫，再將目前的作答畫面截圖，
+                        並繳交至 Google Classroom。
+                    </p>
+
+
+                    <div class="shortcut">
+
+                        <span>
+                            Windows 截圖快捷鍵
+                        </span>
+
+
+                        <strong>
+
+                            <span>
+                                Shift
+                            </span>
+
+                            <b>+</b>
+
+                            <span>
+                                Windows
+                            </span>
+
+                            <b>+</b>
+
+                            <span>
+                                S
+                            </span>
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 返回
+            =================================== -->
+            <div class="bottom-navigation">
+
+                <button
+                    class="secondary-button"
+                    type="button"
+                    data-page="homePage"
+                >
+                    ← 回到活動選擇
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         Footer
+    =========================================== -->
+    <footer class="site-footer">
+
+        <p>
+            人體巡航｜人體器官與功能互動測驗
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

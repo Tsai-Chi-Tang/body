@@ -1,0 +1,1726 @@
+/* =========================================================
+   人體巡航
+   style.css
+========================================================= */
+
+
+/* =========================================================
+   CSS Variables
+========================================================= */
+
+:root {
+
+    --navy: #16324f;
+    --navy-dark: #0f2438;
+
+    --blue: #2676b9;
+    --blue-light: #eaf5fc;
+
+    --teal: #35a6a0;
+    --teal-light: #e8f7f5;
+
+    --orange: #f29a38;
+    --orange-light: #fff3e5;
+
+    --red: #e75b61;
+
+    --green: #4ca77d;
+    --green-light: #eaf7f0;
+
+    --purple: #7b69c8;
+
+    --text: #253746;
+    --text-light: #687987;
+
+    --background: #f4f8fb;
+
+    --white: #ffffff;
+
+    --border: #dce6ed;
+
+    --reset-red: #c95858;
+    --reset-red-light: #fff3f3;
+
+    --shadow:
+        0 10px 30px rgba(22, 50, 79, 0.08);
+
+    --shadow-hover:
+        0 18px 40px rgba(22, 50, 79, 0.15);
+
+    --radius: 18px;
+
+    --transition:
+        180ms ease;
+}
+
+
+
+/* =========================================================
+   Reset
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(53, 166, 160, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(38, 118, 185, 0.08),
+            transparent 30%
+        ),
+        var(--background);
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+::selection {
+    background: rgba(38, 118, 185, 0.2);
+}
+
+
+
+/* =========================================================
+   Header
+========================================================= */
+
+.site-header {
+    position: relative;
+
+    z-index: 20;
+
+    color: white;
+
+    background: var(--navy);
+
+    box-shadow:
+        0 3px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+.header-inner {
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin: 0 auto;
+
+    padding: 18px 0;
+}
+
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    font-size: 27px;
+}
+
+
+.brand h1 {
+    margin: 0;
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.brand p {
+    margin: 3px 0 0;
+
+    font-size: 12px;
+
+    opacity: 0.72;
+}
+
+
+
+/* =========================================================
+   Page
+========================================================= */
+
+.page {
+    display: none;
+}
+
+
+.page.active {
+    display: block;
+}
+
+
+
+/* =========================================================
+   Hero
+========================================================= */
+
+.hero-section {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 320px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #173b5d 0%,
+            #1d638b 52%,
+            #2a8c94 100%
+        );
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 65px 20px;
+
+    text-align: center;
+}
+
+
+.hero-icon {
+    width: 82px;
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    border:
+        1px solid rgba(255,255,255,0.2);
+
+    border-radius: 24px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    font-size: 44px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.1);
+}
+
+
+.hero-content h2 {
+    margin: 0;
+
+    font-size:
+        clamp(
+            34px,
+            5vw,
+            52px
+        );
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.hero-content p {
+    margin: 14px 0 0;
+
+    font-size: 17px;
+
+    opacity: 0.92;
+}
+
+
+.hero-content .hero-subtitle {
+    margin-top: 7px;
+
+    font-size: 13px;
+
+    opacity: 0.7;
+}
+
+
+.hero-decoration {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.06);
+}
+
+
+.hero-decoration-1 {
+    width: 330px;
+    height: 330px;
+
+    left: -100px;
+    top: -150px;
+}
+
+
+.hero-decoration-2 {
+    width: 420px;
+    height: 420px;
+
+    right: -150px;
+    bottom: -240px;
+}
+
+
+
+/* =========================================================
+   Activity Cards
+========================================================= */
+
+.activity-selection {
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(
+            1000px,
+            calc(100% - 40px)
+        );
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 24px;
+
+    margin:
+        -38px auto
+        70px;
+}
+
+
+.activity-card {
+    padding: 34px;
+
+    text-align: left;
+
+    background: var(--white);
+
+    border:
+        1px solid rgba(220,230,237,0.9);
+
+    border-radius: 22px;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+
+.activity-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+
+.activity-card-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 18px;
+
+    font-size: 32px;
+}
+
+
+.activity-blue {
+    background: var(--blue-light);
+}
+
+
+.activity-orange {
+    background: var(--orange-light);
+}
+
+
+.activity-card-number {
+    margin-bottom: 7px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.activity-card h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 24px;
+}
+
+
+.activity-card p {
+    min-height: 50px;
+
+    margin:
+        13px 0
+        25px;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =========================================================
+   Buttons
+========================================================= */
+
+.primary-button,
+.secondary-button,
+.back-button,
+.reset-button {
+    border: none;
+
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+
+.primary-button {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 13px 18px;
+
+    color: white;
+
+    border-radius: 12px;
+
+    background: var(--navy);
+
+    font-weight: 700;
+}
+
+
+.primary-button:hover {
+    background: var(--blue);
+
+    box-shadow:
+        0 8px 18px rgba(38,118,185,0.2);
+}
+
+
+.primary-button span:last-child {
+    font-size: 20px;
+}
+
+
+.secondary-button {
+    padding: 11px 18px;
+
+    color: var(--navy);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 11px;
+
+    background: white;
+
+    font-weight: 700;
+}
+
+
+.secondary-button:hover {
+    background: var(--blue-light);
+
+    border-color: #c5dcea;
+}
+
+
+.back-button {
+    padding: 5px 0;
+
+    color: var(--text-light);
+
+    background: transparent;
+
+    font-size: 13px;
+}
+
+
+.back-button:hover {
+    color: var(--blue);
+}
+
+
+
+/* =========================================================
+   Test Page
+========================================================= */
+
+.test-page {
+    padding:
+        35px
+        0
+        70px;
+}
+
+
+.test-container {
+    width:
+        min(
+            1120px,
+            calc(100% - 40px)
+        );
+
+    margin: 0 auto;
+}
+
+
+.test-header {
+    margin-bottom: 25px;
+}
+
+
+.test-title-row {
+    display: flex;
+
+    gap: 20px;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+}
+
+
+.test-label {
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+.test-title-row h2 {
+    margin:
+        5px
+        0
+        5px;
+
+    color: var(--navy);
+
+    font-size:
+        clamp(
+            28px,
+            4vw,
+            38px
+        );
+}
+
+
+.test-title-row p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================================
+   姓名
+========================================================= */
+
+.name-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 23px;
+
+    padding: 16px 18px;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 18px rgba(22,50,79,0.04);
+}
+
+
+.name-box label {
+    min-width: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--navy);
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+.name-icon {
+    font-size: 18px;
+}
+
+
+.student-name {
+    flex: 1;
+
+    min-height: 44px;
+
+    padding:
+        8px
+        13px;
+
+    color: var(--text);
+
+    border:
+        2px solid #dbe5ec;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #fbfdfe;
+
+    transition:
+        border var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+}
+
+
+.student-name::placeholder {
+    color: #a1adb7;
+}
+
+
+.student-name:focus {
+    background: white;
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 4px rgba(38,118,185,0.1);
+}
+
+
+
+/* =========================================================
+   Instruction Box
+========================================================= */
+
+.instruction-box {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-bottom: 25px;
+
+    padding:
+        15px
+        18px;
+
+    background:
+        var(--teal-light);
+
+    border:
+        1px solid #cce9e5;
+
+    border-radius: 14px;
+}
+
+
+.instruction-icon {
+    flex: 0 0 auto;
+
+    font-size: 21px;
+}
+
+
+.instruction-box strong {
+    color: #206d69;
+
+    font-size: 14px;
+}
+
+
+.instruction-box p {
+    margin:
+        3px
+        0
+        0;
+
+    color: #52706f;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================================
+   Section Heading
+========================================================= */
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 13px;
+
+    color: var(--navy);
+
+    font-size: 15px;
+
+    font-weight: 900;
+}
+
+
+.section-heading > span {
+    width: 26px;
+    height: 26px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--blue);
+
+    border-radius: 8px;
+
+    background: var(--blue-light);
+
+    font-size: 12px;
+}
+
+
+
+/* =========================================================
+   Organ Bank
+========================================================= */
+
+.organ-bank-section {
+    margin-bottom: 24px;
+}
+
+
+.organ-bank {
+    min-height: 130px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+
+    padding: 18px;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+.organ-bank.function-organ-bank {
+    min-height: 145px;
+}
+
+
+
+/* =========================================================
+   Organ Item
+========================================================= */
+
+.organ-item {
+    width: 86px;
+    height: 86px;
+
+    flex:
+        0
+        0
+        auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid #dce7ee;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f4f9fc
+        );
+
+    cursor: grab;
+
+    user-select: none;
+
+    touch-action: none;
+
+    box-shadow:
+        0 5px 12px rgba(22,50,79,0.06);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border var(--transition);
+}
+
+
+.organ-item:hover {
+    transform: translateY(-3px);
+
+    border-color: #bfd4e1;
+
+    box-shadow:
+        0 10px 20px rgba(22,50,79,0.12);
+}
+
+
+.organ-item:active {
+    cursor: grabbing;
+
+    transform: scale(1.04);
+}
+
+
+.organ-item.dragging {
+    position: fixed;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+    border-color: var(--blue);
+
+    opacity: 0.96;
+
+    box-shadow:
+        0 20px 40px rgba(22,50,79,0.2);
+}
+
+
+.organ-item svg {
+    width: 65px;
+    height: 65px;
+
+    display: block;
+
+    pointer-events: none;
+}
+
+
+
+/* =========================================================
+   人體
+========================================================= */
+
+.body-test-section {
+    margin-top: 25px;
+}
+
+
+.body-drop-zone {
+    position: relative;
+
+    min-height: 760px;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f8fbfd 100%
+        );
+
+    box-shadow: var(--shadow);
+
+    touch-action: none;
+}
+
+
+.body-background {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+
+.body-background svg {
+    width:
+        min(
+            420px,
+            58%
+        );
+
+    height: 92%;
+
+    max-height: 730px;
+}
+
+
+
+/* =========================================================
+   放置在人體上的器官
+========================================================= */
+
+.placed-organ {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform:
+        translate(-50%, -50%);
+
+    cursor: grab;
+
+    touch-action: none;
+}
+
+
+.placed-organ svg {
+    width: 100%;
+    height: 100%;
+
+    filter:
+        drop-shadow(
+            0 4px 4px rgba(0,0,0,0.15)
+        );
+}
+
+
+.placed-organ:hover {
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+}
+
+
+
+/* =========================================================
+   活動二功能表
+========================================================= */
+
+.function-section {
+    margin-top: 25px;
+}
+
+
+.function-table {
+    overflow: hidden;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+.function-table-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        180px;
+
+    color: white;
+
+    background: var(--navy);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.function-table-header > div {
+    padding:
+        14px
+        18px;
+}
+
+
+.function-table-header > div:last-child {
+    text-align: center;
+
+    border-left:
+        1px solid rgba(255,255,255,0.12);
+}
+
+
+.function-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        180px;
+
+    min-height: 108px;
+
+    border-top:
+        1px solid #e7edf2;
+}
+
+
+.function-description {
+    display: flex;
+
+    align-items: center;
+
+    padding: 19px;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+.answer-drop-zone {
+    min-height: 86px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px;
+
+    border:
+        2px dashed #cbdbe5;
+
+    border-radius: 13px;
+
+    background: #f8fbfd;
+
+    transition:
+        border var(--transition),
+        background var(--transition);
+}
+
+
+.answer-drop-zone.drag-over {
+    border-color: var(--blue);
+
+    background: var(--blue-light);
+}
+
+
+.answer-drop-zone .organ-item {
+    width: 70px;
+    height: 70px;
+
+    cursor: grab;
+
+    box-shadow:
+        0 4px 10px rgba(22,50,79,0.08);
+}
+
+
+.answer-drop-zone .organ-item svg {
+    width: 54px;
+    height: 54px;
+}
+
+
+
+/* =========================================================
+   控制按鈕
+========================================================= */
+
+.test-controls {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 18px;
+}
+
+
+.reset-button {
+    padding:
+        10px
+        17px;
+
+    color: var(--reset-red);
+
+    border:
+        1px solid #e5bcbc;
+
+    border-radius: 10px;
+
+    background: var(--reset-red-light);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.reset-button:hover {
+    color: white;
+
+    border-color: var(--reset-red);
+
+    background: var(--reset-red);
+
+    box-shadow:
+        0 7px 16px rgba(201,88,88,0.18);
+}
+
+
+.reset-button:active {
+    transform: scale(0.97);
+}
+
+
+
+/* =========================================================
+   截圖提醒
+========================================================= */
+
+.screenshot-reminder {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    margin-top: 30px;
+
+    padding: 23px;
+
+    border:
+        1px solid #cfe2ed;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff9ff,
+            #f7fcff
+        );
+}
+
+
+.reminder-icon {
+    width: 50px;
+    height: 50px;
+
+    flex:
+        0
+        0
+        auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: white;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 5px 12px rgba(38,118,185,0.08);
+}
+
+
+.reminder-content {
+    flex: 1;
+}
+
+
+.reminder-content h3 {
+    margin:
+        1px
+        0
+        6px;
+
+    color: var(--navy);
+
+    font-size: 17px;
+}
+
+
+.reminder-content p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.shortcut {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 13px;
+}
+
+
+.shortcut > span {
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.shortcut strong {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        7px
+        10px;
+
+    color: var(--navy);
+
+    border:
+        1px solid #d9e7ef;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 12px;
+
+    box-shadow:
+        0 3px 8px rgba(22,50,79,0.05);
+}
+
+
+.shortcut strong b {
+    color: #9aabb7;
+
+    font-weight: 400;
+}
+
+
+
+/* =========================================================
+   Bottom Navigation
+========================================================= */
+
+.bottom-navigation {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 25px;
+}
+
+
+
+/* =========================================================
+   Footer
+========================================================= */
+
+.site-footer {
+    padding:
+        25px
+        20px
+        35px;
+
+    color: #91a0aa;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .activity-selection {
+        grid-template-columns: 1fr;
+
+        margin-top: -25px;
+    }
+
+
+    .activity-card p {
+        min-height: auto;
+    }
+
+
+    .body-drop-zone {
+        min-height: 680px;
+    }
+
+
+    .body-background svg {
+        width:
+            min(
+                390px,
+                72%
+            );
+    }
+
+
+    .function-table-header,
+    .function-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            145px;
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .header-inner,
+    .test-container {
+        width:
+            min(
+                calc(100% - 24px),
+                1120px
+            );
+    }
+
+
+    .hero-section {
+        min-height: 290px;
+    }
+
+
+    .hero-content {
+        padding:
+            55px
+            15px;
+    }
+
+
+    .activity-selection {
+        width:
+            calc(100% - 24px);
+    }
+
+
+    .activity-card {
+        padding: 25px;
+    }
+
+
+    .name-box {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 8px;
+    }
+
+
+    .name-box label {
+        min-width: auto;
+    }
+
+
+    .organ-bank {
+        gap: 8px;
+
+        padding: 13px;
+    }
+
+
+    .organ-item {
+        width: 68px;
+        height: 68px;
+    }
+
+
+    .organ-item svg {
+        width: 53px;
+        height: 53px;
+    }
+
+
+    .body-drop-zone {
+        min-height: 590px;
+
+        border-radius: 17px;
+    }
+
+
+    .body-background svg {
+        width: 78%;
+
+        height: 94%;
+    }
+
+
+    .placed-organ {
+        width: 62px;
+        height: 62px;
+    }
+
+
+    .function-table-header {
+        grid-template-columns:
+            minmax(0, 1fr)
+            105px;
+    }
+
+
+    .function-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            105px;
+    }
+
+
+    .function-description {
+        padding: 14px;
+
+        font-size: 13px;
+    }
+
+
+    .answer-drop-zone {
+        min-height: 78px;
+
+        margin: 7px;
+    }
+
+
+    .answer-drop-zone .organ-item {
+        width: 61px;
+        height: 61px;
+    }
+
+
+    .answer-drop-zone .organ-item svg {
+        width: 47px;
+        height: 47px;
+    }
+
+
+    .screenshot-reminder {
+        gap: 12px;
+
+        padding: 17px;
+    }
+
+
+    .reminder-icon {
+        width: 43px;
+        height: 43px;
+
+        font-size: 21px;
+    }
+
+
+    .shortcut strong {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .test-controls {
+        justify-content: center;
+    }
+
+
+    .reset-button {
+        width: 100%;
+
+        max-width: 240px;
+    }
+
+}
+
+
+
+@media (max-width: 420px) {
+
+    .brand h1 {
+        font-size: 18px;
+    }
+
+
+    .brand p {
+        font-size: 10px;
+    }
+
+
+    .organ-item {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .organ-item svg {
+        width: 47px;
+        height: 47px;
+    }
+
+
+    .body-drop-zone {
+        min-height: 550px;
+    }
+
+
+    .function-table-header {
+        grid-template-columns:
+            minmax(0, 1fr)
+            88px;
+
+        font-size: 11px;
+    }
+
+
+    .function-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            88px;
+    }
+
+
+    .function-description {
+        padding: 12px;
+
+        font-size: 12px;
+
+        line-height: 1.65;
+    }
+
+
+    .answer-drop-zone {
+        margin: 5px;
+    }
+
+
+    .instruction-box {
+        padding: 13px;
+    }
+
+}
+
+
+
+/* =========================================================
+   列印
+========================================================= */
+
+@media print {
+
+    .site-header,
+    .back-button,
+    .bottom-navigation,
+    .site-footer,
+    .test-controls {
+        display: none !important;
+    }
+
+
+    body {
+        background: white;
+    }
+
+
+    .test-page {
+        padding: 0;
+    }
+
+
+    .test-container {
+        width: 100%;
+    }
+
+
+    .screenshot-reminder {
+        break-inside: avoid;
+    }
+
+}
